@@ -7,5 +7,17 @@
         "psr-4": {
             "Divulgueregional\\ConsultaPublicas\\": "src/"
         }
+    },
+    "authors": [
+        {
+            "name": "Roseno Matos",
+            "email": "roseno@divulgueregional.com.br"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2.5,<8.2",
+        "guzzlehttp/guzzle": "^7.0"
     }
 }
