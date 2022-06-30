@@ -14,6 +14,12 @@
             "email": "roseno@divulgueregional.com.br"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://github.com/divulgueregional/consulta-publicas/"
+       }
+   ],
     "require": {
         "php": ">=7.2.5,<8.2",
         "guzzlehttp/guzzle": "^7.0"
