@@ -8,7 +8,7 @@ Esse projeto foi implementado usando consultas de API grátis disponível pela i
 <b>Instalação: </b>
 Para utilizar a biblioteca através do composer:
 ```php
-composer require divulgueregional/consulta-publica
+composer require divulgueregional/consulta-publicas
 ```
 ## Atualizar:
 ```php
@@ -16,7 +16,7 @@ composer update
 ```
 <b>Ou pela última tag: </b>
 ```php
-composer require divulgueregional/consulta-publica 1.0.5
+composer require divulgueregional/consulta-publicas 1.0.5
 ```
 
 ## Documentação:
