@@ -281,7 +281,7 @@ class ConsultaPublica{
         try {
             $response = $this->clientawesomeapi->request(
                 'GET',
-                "/api/cep/v2/88520400",
+                "/api/cep/v2/{$cep}",
                 [
                     'headers' => [
                         'Accept' => 'application/json',
