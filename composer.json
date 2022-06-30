@@ -1,0 +1,21 @@
+{
+    "name": "divulgueregional/consulta-publicas",
+    "description": "Consultar cnpj e cep em api gratis",
+    "type": "library",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Divulgueregional\\ConsultaPublicas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roseno Matos",
+            "email": "roseno@divulgueregional.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5,<8.2",
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
