@@ -6,7 +6,7 @@ Você poderá escolher em qual opção queira consultar e depois tratar o retorn
 
 ```php
     require_once './consulta-publica/vendor/autoload.php';
-    use Divulgueregional\ConsultaPublica\ConsultaPublica;
+    use Divulgueregional\ConsultaPublicas\ConsultaPublica;
     $onsultaPublica =  new ConsultaPublica();
 
     $cnpj = '11.444.777/0001-61';//pode ser só número ou em formato de cnpj
@@ -26,7 +26,7 @@ Para validar só segui os passos abaixo.
 
 ```php
     require_once './consulta-publica/vendor/autoload.php';
-    use Divulgueregional\ConsultaPublica\ConsultaPublica;
+    use Divulgueregional\ConsultaPublicas\ConsultaPublica;
     $onsultaPublica =  new ConsultaPublica();
 
     $cnpj = '11.444.777/0001-61';//pode ser só número ou em formato de cnpj
@@ -48,7 +48,7 @@ Formatei para meu uso próprio para a minha aplicação.
 
 ```php
     require_once './consulta-publica/vendor/autoload.php';
-    use Divulgueregional\ConsultaPublica\ConsultaPublica;
+    use Divulgueregional\ConsultaPublicas\ConsultaPublica;
     $onsultaPublica =  new ConsultaPublica();
 
     $cnpj = '11.444.777/0001-61';//pode ser só número ou em formato de cnpj
