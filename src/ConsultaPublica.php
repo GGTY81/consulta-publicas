@@ -365,6 +365,7 @@ class ConsultaPublica{
         $d->UF = $dados->estabelecimento->estado->sigla;
         $d->xUF = $dados->estabelecimento->estado->nome;
         $d->cUF = $dados->estabelecimento->estado->ibge_id;
+        $d->IE = '';
 
         foreach ($dados->estabelecimento->inscricoes_estaduais as $value) {
             $d->IE = $value->inscricao_estadual;
