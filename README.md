@@ -29,6 +29,10 @@ Acesse a pasta docs e leia o README.md
 <b>CONSULTAR CEP</b><br>
 - 3 API diferentes
 
+<b>CONSULTAS DIVERSAS</b><br>
+- Feriados nacionais
+- Cidades de um determinado estado
+
 ## Autor:
 Roseno Matos (developer) rosenomatos@gmail.com<br>
 

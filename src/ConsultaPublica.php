@@ -12,6 +12,9 @@ class ConsultaPublica{
     {
     }
 
+    ######################################################
+    ############## CONSULTAR CNPJ ########################
+    ######################################################
     public function consultarCNPJ(string $cnpj){
         if($this->validarCNPJ($cnpj)){
             return $this->publicacnpjws($cnpj, 1);
@@ -206,6 +209,9 @@ class ConsultaPublica{
         }
     }
 
+    ######################################################
+    ############## CONSULTAR CEP #########################
+    ######################################################
     public function consultarCEP(string $cep, int $opcao=1){
         $cep = preg_replace('/[^0-9]/', '', (string) $cep);
         if($this->validarCEP($cep)){
@@ -282,6 +288,59 @@ class ConsultaPublica{
             $response = $this->clientawesomeapi->request(
                 'GET',
                 "/api/cep/v2/{$cep}",
+                [
+                    'headers' => [
+                        'Accept' => 'application/json',
+                    ]
+                ]
+            );
+            return json_decode($response->getBody()->getContents());
+        } catch (ClientException $e) {
+            $statusCode = $e->getResponse()->getStatusCode();
+            $response = $e->getResponse()->getReasonPhrase();
+
+            return ['error' => $response, 'statusCode' => $statusCode];
+        } catch (\Exception $e) {
+            throw new Exception("Falha ao consultar o cep: {$e->getMessage()}");
+        }
+    }
+
+    ######################################################
+    ############## CONSULTAR IBGE ########################
+    ######################################################
+    public function cidadePorEstado(string $uf){
+        $this->clientawesomeapi = new Client([
+            'base_uri' => 'https://brasilapi.com.br',
+        ]);
+        try {
+            $response = $this->clientawesomeapi->request(
+                'GET',
+                "/api/ibge/municipios/v1/{$uf}",
+                [
+                    'headers' => [
+                        'Accept' => 'application/json',
+                    ]
+                ]
+            );
+            return json_decode($response->getBody()->getContents());
+        } catch (ClientException $e) {
+            $statusCode = $e->getResponse()->getStatusCode();
+            $response = $e->getResponse()->getReasonPhrase();
+
+            return ['error' => $response, 'statusCode' => $statusCode];
+        } catch (\Exception $e) {
+            throw new Exception("Falha ao consultar o cep: {$e->getMessage()}");
+        }
+    }
+
+    public function feriados(int $ano){
+        $this->clientawesomeapi = new Client([
+            'base_uri' => 'https://brasilapi.com.br',
+        ]);
+        try {
+            $response = $this->clientawesomeapi->request(
+                'GET',
+                "/api/feriados/v1/{$ano}",
                 [
                     'headers' => [
                         'Accept' => 'application/json',
