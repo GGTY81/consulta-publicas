@@ -16,7 +16,7 @@ composer update
 ```
 <b>Ou pela última tag: </b>
 ```php
-composer update divulgueregional/consulta-publicas 1.0.9
+composer update divulgueregional/consulta-publicas 1.09
 ```
 
 ## Documentação:
